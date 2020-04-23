@@ -1,0 +1,49 @@
+;Menggunakan SevenSegment Common Anode
+;     A	= P1.0
+;     B	= P1.1
+;     C	= P1.2
+;     D	= P1.3
+;     E	= P1.4
+;     F	= P1.5
+;     G	= P1.6
+;   dot	= P1.7
+
+	ORG 00H
+
+INPUT:	JNB P0.0, ANGKA1 ;Push Button 1
+	JNB P0.1, ANGKA2 ;Push Button 2
+	JNB P0.2, ANGKA3 ;Push Button 3
+	JNB P0.3, ANGKA4 ;Push Button 4
+	JNB P0.4, ANGKA5 ;Push Button 5
+	JNB P0.5, ANGKA6 ;Push Button 6
+	JNB P0.6, ANGKA7 ;Push Button 7
+	JNB P0.7, ANGKA8 ;Push Button 8
+
+IDLE:	MOV P1, #0FFH
+	SJMP INPUT
+
+ANGKA1:	MOV P1, #0F9H
+	SJMP INPUT
+
+ANGKA2:	MOV P1, #0A4H
+	SJMP INPUT
+
+ANGKA3:	MOV P1, #0B0H
+	SJMP INPUT
+
+ANGKA4:	MOV P1, #099H
+	SJMP INPUT
+
+ANGKA5:	MOV P1, #092H
+	SJMP INPUT
+
+ANGKA6:	MOV P1, #082H
+	SJMP INPUT
+
+ANGKA7:	MOV P1, #0F8H
+	SJMP INPUT
+
+ANGKA8:	MOV P1, #080H
+	SJMP INPUT
+
+END
